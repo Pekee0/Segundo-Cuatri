@@ -37,7 +37,17 @@ int main()
     mostrarPersona(aux->dato);
 
     /// EJERCICIO 5
+     nodoArbol * buscado;
+    char nombre[10];
 
+    printf("Ingrese el nombre de la persona a buscar: \n");
+    fflush(stdin);
+    gets(nombre);
+
+    buscado = buscarPorNombre(arbol,nombre);
+
+    printf("La persona:\n");
+    mostrarPersona(buscado->dato);
     return 0;
 }
 
@@ -73,3 +83,17 @@ nodo * arbolToLista(nodoArbol * arbol, nodo * lista)
     return lista;
 }
 
+nodoArbol * buscarPorNombre (nodoArbol * arbol, char nombre[])
+{
+    if(arbol != NULL)
+    {
+        if(strcmp(arbol->dato.nombre,nombre) != 0)
+        {
+            arbol= buscarPorNombre(arbol->izq,nombre);
+            arbol = buscarPorNombre(arbol->der,nombre);
+        }
+
+
+    }
+        return arbol;
+}

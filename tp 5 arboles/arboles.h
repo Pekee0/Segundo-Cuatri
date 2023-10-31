@@ -15,4 +15,5 @@ nodoArbol * insertarLegajo (nodoArbol * arbol, nodoArbol * nuevo);
 void mostrarPreOrder(nodoArbol * arbol);
 void mostrarInOrder(nodoArbol * arbol);
 void mostrarPosOrder(nodoArbol * arbol);
+int CalcularAltura (nodoArbol * arbol);
 #endif // ARBOLES_H_INCLUDED

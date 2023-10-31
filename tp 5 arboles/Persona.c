@@ -31,3 +31,4 @@ void mostrarPersona(persona dato)
     printf("---------------------------------\n");
 }
 
+

@@ -7,6 +7,7 @@
 #define test printf("hola\n");
 nodoArbol * cargarArbol(nodoArbol * arbol);
 nodo * arbolToLista(nodoArbol * arbol, nodo * lista);
+nodoArbol * buscarPorNombre (nodoArbol * arbol, char nombre[]);
 int main()
 {
     /// EJERCICIO 1
@@ -48,6 +49,13 @@ int main()
 
     printf("La persona:\n");
     mostrarPersona(buscado->dato);
+
+    /// EJERCICIO 6
+    int alturaTotal = 0;
+
+    alturaTotal = CalcularAltura(arbol);
+
+    printf("La altura total del arbol es de: %d", alturaTotal);
     return 0;
 }
 
@@ -89,8 +97,14 @@ nodoArbol * buscarPorNombre (nodoArbol * arbol, char nombre[])
     {
         if(strcmp(arbol->dato.nombre,nombre) != 0)
         {
-            arbol= buscarPorNombre(arbol->izq,nombre);
-            arbol = buscarPorNombre(arbol->der,nombre);
+            test
+            arbol->izq = buscarPorNombre(arbol->izq,nombre);
+            arbol->der = buscarPorNombre(arbol->der,nombre);
+
+        }
+        else
+        {
+            printf("se encontro el nombre\n");
         }
 
 

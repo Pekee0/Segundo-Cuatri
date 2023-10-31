@@ -104,18 +104,17 @@ void mostrarPosOrder(nodoArbol * arbol)
     }
 }
 
-/*persona cargarPersona(persona dato)
+int CalcularAltura (nodoArbol * arbol)
 {
-    printf("Ingrese el legajo de la persona:\n");
-    scanf("%d",&dato.legajo);
+    int total = 0;
 
-    printf("Ingrese el nombre de la persona: \n");
-    fflush(stdin);
-    gets(dato.nombre);
+    if (arbol != NULL)
+    {
+        total = CalcularAltura(arbol->izq) + 1;
+        total = CalcularAltura(arbol->der) +1 ;
+    }
 
-    printf("Ingrese la edad de la persona:\n");
-    scanf("%d",&dato.edad);
-
-    return dato;
+    return total;
 }
-*/
+
+

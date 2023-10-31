@@ -27,7 +27,7 @@ nodoArbol * crearNodoArbol (persona dato)
 
 nodoArbol * buscarLegajo (nodoArbol * Arbol, int legajo)
 {
-    nodoArbol * rta;
+    nodoArbol * rta ;
 
     if(Arbol != NULL)
     {
@@ -47,6 +47,7 @@ nodoArbol * buscarLegajo (nodoArbol * Arbol, int legajo)
           }
       }
     }
+
 
     return rta;
 }
@@ -107,14 +108,40 @@ void mostrarPosOrder(nodoArbol * arbol)
 int CalcularAltura (nodoArbol * arbol)
 {
     int total = 0;
-
+    int alturaIzquierda = 0;
+    int alturaDerecha = 0;
     if (arbol != NULL)
     {
-        total = CalcularAltura(arbol->izq) + 1;
-        total = CalcularAltura(arbol->der) +1 ;
+        alturaIzquierda = CalcularAltura(arbol->izq);
+        alturaDerecha = CalcularAltura(arbol->der);
     }
+    if(alturaIzquierda > alturaDerecha)
+    {
+        total= alturaIzquierda;
+    }
+    else
+    total=alturaDerecha;
 
     return total;
 }
 
+int contarNodos (nodoArbol * arbol)
+{
+    int total = 0;
+    int izq = 0;
+    int der = 0;
 
+    if(arbol)
+    {
+       der = contarNodos(arbol->der);
+       izq =  contarNodos(arbol->der);
+    }
+    else
+    {
+        return 0;
+    }
+
+    total = der + izq +1;
+
+    return total;
+}

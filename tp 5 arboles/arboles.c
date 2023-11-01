@@ -134,7 +134,7 @@ int contarNodos (nodoArbol * arbol)
     if(arbol)
     {
        der = contarNodos(arbol->der);
-       izq =  contarNodos(arbol->der);
+       izq =  contarNodos(arbol->izq);
     }
     else
     {
@@ -144,4 +144,14 @@ int contarNodos (nodoArbol * arbol)
     total = der + izq +1;
 
     return total;
+}
+
+int contarHojas (nodoArbol * arbol)
+{
+    int total = 0;
+
+    if(arbol != NULL)
+    {
+
+    }
 }

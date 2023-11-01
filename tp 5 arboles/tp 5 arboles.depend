@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1698759418 source:c:\users\usuario\desktop\segundo-cuatri\tp 5 arboles\listassimples.c
+	"ListasSimples.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	"Persona.h"
+
+1698759418 c:\users\usuario\desktop\segundo-cuatri\tp 5 arboles\listassimples.h
+	"Persona.h"
+
+1698759418 c:\users\usuario\desktop\segundo-cuatri\tp 5 arboles\persona.h
+
+1698759418 source:c:\users\usuario\desktop\segundo-cuatri\tp 5 arboles\persona.c
+	<stdio.h>
+	<stdlib.h>
+	"Persona.h"
+	<string.h>
+	"string.h"
+

@@ -45,7 +45,7 @@ int main()
         printf("No existe.\n");
 
 
-    /// EJERCICIO 5 (NO FUNCA)
+    /// EJERCICIO 5
      nodoArbol * buscado;
     char nombre[10];
 
@@ -65,12 +65,14 @@ int main()
 
     printf("La altura total del arbol es de: %d\n", alturaTotal);
 
-    /// EJERCICIO 7
+    /// EJERCICIO 7 (funca raro)
     int totalNodos = 0;
 
     totalNodos = contarNodos(arbol);
 
     printf("La cantidad total de nodos es de: %d\n", totalNodos);
+
+
     return 0;
 }
 

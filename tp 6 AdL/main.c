@@ -30,42 +30,31 @@ typedef struct { /// struct del arreglo que contiene el primer nodo de la lista
     nodo * listaDeNotas;
 } celda;
 
+notaAlumno cargarAlumno (notaAlumno alumno);
 
 int main()
 {
-    printf("Hello world!\n");
+
+    notaAlumno alu;
+
+    alu = cargarAlumno(alu);
+
     return 0;
 }
 
-
-int cargarNotas (celda adl[], int dimension)
-{
-    int nota = 0;
-    char alumno [20];
-    char materia[30];
-    char seguir = 's';
-
-    int validos = 0;
-
-
-    while (seguir == 's' && validos < dimension)
-    {
-        printf("Ingrese El nombre del alumno:\n");
-        fflush(stdin);
-        gets(alumno);
-
-        printf("Ingrese el nombre de la materia: \n");
-        fflush(stdin);
-        gets(materia);
-
-        printf("Ingresee la nota del alumno\n");
-        scanf("%d",&nota);
-
-        validos = alta(adl,materia,alumno,nota,validos);
-    }
-}
-
-int alta(celda adl[], char materia[],char alumno[],int nota,int validos)
+notaAlumno cargarAlumno (notaAlumno alumno)
 {
 
+    printf("Ingrese el legajo: \n");
+    scanf("%d",&alumno.legajo);
+
+    printf("Ingrese el nombre del alumno; \n");
+    fflush(stdin);
+    gets(alumno.nombreApe);
+
+    printf("Ingrese la nota del alumno.\n");
+    scanf ("%d",&alumno.nota);
+
+    return alumno;
 }
+

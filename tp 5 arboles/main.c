@@ -72,7 +72,13 @@ int main()
 
     printf("La cantidad total de nodos es de: %d\n", totalNodos);
 
+    /// EJERCICIO 8
 
+    int totalHojas = 0;
+
+    totalHojas = contarHojas(arbol);
+
+    printf("El total de nodos hoja en el arbol es de: %d \n",totalHojas);
     return 0;
 }
 

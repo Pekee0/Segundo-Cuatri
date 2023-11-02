@@ -110,16 +110,20 @@ int CalcularAltura (nodoArbol * arbol)
     int total = 0;
     int alturaIzquierda = 0;
     int alturaDerecha = 0;
+
     if (arbol != NULL)
     {
-        alturaIzquierda = CalcularAltura(arbol->izq);
-        alturaDerecha = CalcularAltura(arbol->der);
+        alturaIzquierda = CalcularAltura(arbol->izq) + 1 ;
+        alturaDerecha = CalcularAltura(arbol->der) + 1 ;
     }
     if(alturaIzquierda > alturaDerecha)
     {
         total= alturaIzquierda;
     }
     else
+
+
+
     total=alturaDerecha;
 
     return total;
@@ -150,8 +154,16 @@ int contarHojas (nodoArbol * arbol)
 {
     int total = 0;
 
-    if(arbol != NULL)
+    if(arbol->der != NULL && arbol->izq !=NULL)
     {
-
+        total = contarHojas(arbol->der);
+        total = contarHojas(arbol->izq);
     }
+    else
+    {
+        total = contarHojas(arbol->der) + 1;
+        total = contarHojas(arbol->izq) + 1;
+    }
+
+    return total;
 }

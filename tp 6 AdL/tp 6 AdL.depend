@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1699042756 source:c:\users\pekee\desktop\segundo-cuatri\tp 6 adl\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -79,6 +79,15 @@ int main()
     totalHojas = contarHojas(arbol);
 
     printf("El total de nodos hoja en el arbol es de: %d \n",totalHojas);
+
+    /// EJERCICIO 9
+    int legajoABorrar = 0;
+
+    printf("Ingrese el legajojo que desea borrar: \n");
+    scanf("%d",&legajoABorrar);
+
+
+
     return 0;
 }
 

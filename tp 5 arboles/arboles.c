@@ -150,20 +150,54 @@ int contarNodos (nodoArbol * arbol)
     return total;
 }
 
+int esHoja (nodoArbol * arbol)
+{
+    int flag = 0;
+
+    if(arbol)
+    {
+        if(arbol->der == NULL && arbol->izq == NULL)
+        {
+            flag = 1;
+        }
+    }
+
+    return flag;
+}
+
 int contarHojas (nodoArbol * arbol)
 {
-    int total = 0;
-
-    if(arbol->der != NULL && arbol->izq !=NULL)
+    if(!arbol)
     {
-        total = contarHojas(arbol->der);
-        total = contarHojas(arbol->izq);
+        return 0;
     }
-    else
+    else if(esHoja(arbol))
     {
-        total = contarHojas(arbol->der) + 1;
-        total = contarHojas(arbol->izq) + 1;
+        return 1;
     }
 
-    return total;
+    return contarHojas(arbol->der) + contarHojas(arbol->izq);
+}
+
+nodoArbol * borrarNodo (nodoArbol * arbol, int legajoBorrar)
+{
+    if(arbol != NULL)
+    {
+        if(arbol->dato.legajo == legajoBorrar)
+        {
+            if(arbol->izq != NULL)
+            {
+
+            }
+            else if (arbol->der != NULL)
+            {
+
+            }
+            else if (arbol->der == NULL && arbol->izq == NULL)
+            {
+                free(arbol);
+                arbol = NULL;
+            }
+        }
+    }
 }

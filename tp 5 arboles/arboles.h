@@ -17,4 +17,6 @@ void mostrarInOrder(nodoArbol * arbol);
 void mostrarPosOrder(nodoArbol * arbol);
 int CalcularAltura (nodoArbol * arbol);
 int contarNodos (nodoArbol * arbol);
+int esHoja (nodoArbol * arbol);
+int contarHojas (nodoArbol * arbol);
 #endif // ARBOLES_H_INCLUDED

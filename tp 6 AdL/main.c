@@ -41,6 +41,8 @@ nodo * iniclista();
 void MostrarNotasDeMateria(nodo * lista);
 void cargarArchivo (char nombreArchivo[], celda adl[], int validos);
 void mostrarArchivo(char nombreArchivo[]);
+
+
 int main()
 {
         celda adl[30];
@@ -70,22 +72,7 @@ int main()
     return 0;
 }
 
-notaAlumno cargarAlumno (notaAlumno alumno)
-{
-
-    printf("Ingrese el legajo del alumno: \n");
-    scanf("%d",&alumno.legajo);
-
-    printf("Ingrese el nombre del alumno; \n");
-    fflush(stdin);
-    gets(alumno.nombreApe);
-
-    printf("Ingrese la nota del alumno.\n");
-    scanf ("%d",&alumno.nota);
-
-    return alumno;
-}
-
+/// FUBNCIONES DEL ARREGLO DE LISTAS
 
 int cargarArray(celda adl[], int dimension)
 {
@@ -119,8 +106,6 @@ int cargarArray(celda adl[], int dimension)
     return validos;
 }
 
-
-
 int alta (celda adl[], char materia[], int idMateria, notaAlumno alu, int validos)
 {
         nodo * aux = crearNodo(alu);
@@ -136,18 +121,6 @@ int alta (celda adl[], char materia[], int idMateria, notaAlumno alu, int valido
 
             return validos;
 }
-
-
-nodo * crearNodo (notaAlumno alu)
-{
-    nodo * aux = (nodo*)malloc(sizeof(nodo));
-
-    aux->dato = alu;
-    aux->siguiente = NULL;
-
-    return aux;
-}
-
 
 int BuscarPosMateria (celda adl[], int idMateria, int validos)
 {
@@ -182,6 +155,57 @@ int agregarMateria (celda adl[],int idMateria, char materia[], int validos)
     return validos;
 }
 
+int ArchivoToADL(celda adl[],int validos, char nombreArchivo[], int dimension)
+{
+    FILE  * Archivo = fopen(nombreArchivo,"rb");
+    registroArchivo aux;
+    int idMateria = 0;
+    char Materia[20];
+    notaAlumno alu;
+
+    if(Archivo)
+    {
+        while(fread(&aux,sizeof(registroArchivo),1,Archivo) > 0)
+        {
+            alu = cargarAlumno(alu);
+            validos = cargarArray(adl,dimension);
+
+
+        }
+    }
+    else
+    {
+        printf("error en el archivo.\n");
+    }
+}
+/// FUNCIONES DE LA LISTA
+
+notaAlumno cargarAlumno (notaAlumno alumno)
+{
+
+    printf("Ingrese el legajo del alumno: \n");
+    scanf("%d",&alumno.legajo);
+
+    printf("Ingrese el nombre del alumno; \n");
+    fflush(stdin);
+    gets(alumno.nombreApe);
+
+    printf("Ingrese la nota del alumno.\n");
+    scanf ("%d",&alumno.nota);
+
+    return alumno;
+}
+
+nodo * crearNodo (notaAlumno alu)
+{
+    nodo * aux = (nodo*)malloc(sizeof(nodo));
+
+    aux->dato = alu;
+    aux->siguiente = NULL;
+
+    return aux;
+}
+
 nodo * agregarPpio (nodo * lista, nodo * nuevo)
 {
     if(lista == NULL)
@@ -203,7 +227,6 @@ nodo * iniclista()
     return NULL;
 }
 
-
 void MostrarNotasDeMateria(nodo * lista)
 {
 
@@ -220,6 +243,8 @@ void MostrarNotasDeMateria(nodo * lista)
     }
 }
 
+
+/// FUNCIONES DEL ARCHIVO
 
 void cargarArchivo (char nombreArchivo[], celda adl[], int validos)
 {
@@ -260,7 +285,6 @@ void cargarArchivo (char nombreArchivo[], celda adl[], int validos)
     }
 
 }
-
 
 void mostrarArchivo(char nombreArchivo[])
 {

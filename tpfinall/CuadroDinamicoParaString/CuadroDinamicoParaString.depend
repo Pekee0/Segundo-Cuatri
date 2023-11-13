@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1699637896 source:e:\testeos\cuadrodinamicoparastring\main.c
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<stdbool.h>
+	<time.h>
+
+1699637580 source:f:\testeos\cuadrodinamicoparastring\main.c
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<stdbool.h>
+	<time.h>
+
+1699637896 source:c:\users\usuario\desktop\cuadrodinamicoparastring\main.c
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<stdbool.h>
+	<time.h>
+

@@ -169,14 +169,14 @@ int ArchivoToADL(celda adl[],int validos, char nombreArchivo[], int dimension)
         {
             alu = cargarAlumno(alu);
             validos = cargarArray(adl,dimension);
-
-
         }
     }
     else
     {
         printf("error en el archivo.\n");
     }
+
+    return validos;
 }
 /// FUNCIONES DE LA LISTA
 

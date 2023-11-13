@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1699833342 source:c:\users\usuario\desktop\tpfinall\logintp.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

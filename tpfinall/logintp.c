@@ -6,6 +6,8 @@ typedef struct
 {
     int idLogro;
     char NombreLogro[20];
+    char Descripcion[60];
+    int obtenido; /// funciona como un bool
 
 }logros;
 
@@ -14,7 +16,7 @@ typedef struct
     char Nombre[20];
     int puntaje;
     int dinero;
-    logros logros;
+    logros logros[20];
 
 }player;
 
@@ -137,12 +139,36 @@ player crearPerfil(char nombreArchivo[])
     /// se debe ver que el nombre no exista en el archivo.
 
     aux.dinero = 20000;
-    //aux.logros = NULL; ver como hacer esto
+    //aux.logros[] = NULL; ver como hacer esto
     aux.puntaje = 0;
 
     printf("Usuario creado con exito.\n");
     return aux;
 
+}
+
+logros CrearLogros(logros Logros[])
+{
+
+    Logros[0].idLogro = 1;
+    strcpy(Logros[0].NombreLogro,"Seamos libres que lo demas no importa nada");
+    strcpy(Logros[0].Descripcion,"salva la vida del General San Martin");
+    Logros[0].obtenido = 0;
+
+}
+
+void agregarPlayerToArchivo(char nombreArchivo[], player nuevo)
+{
+    FILE * archivo = fopen(nombreArchivo,"ab");
+
+    if(archivo)
+    {
+        fwrite(&nuevo,sizeof(player),1,archivo);
+    }
+    else
+    {
+        printf("Error.\n");
+    }
 }
 
 int buscarPlayerArchivo(char nombreArchivo[], char nombreBuscado[])

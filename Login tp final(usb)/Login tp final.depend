@@ -1,0 +1,90 @@
+# depslib dependency file v1.0
+1700094612 source:c:\users\usuario\desktop\login tp final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cFront.h"
+
+1700088318 c:\users\usuario\desktop\login tp final\cfront.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+	<unistd.h>
+	<stdbool.h>
+
+1700088771 source:c:\users\usuario\desktop\login tp final\cfront.c
+	"cFront.h"
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+	<unistd.h>
+	<stdbool.h>
+
+1700331862 source:d:\login tp final\cfront.c
+	"cFront.h"
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+	<unistd.h>
+	<stdbool.h>
+
+1700326272 d:\login tp final\cfront.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+	<unistd.h>
+	<stdbool.h>
+
+1700429167 source:d:\login tp final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cFront.h"
+	"Login.h"
+
+1700435312 source:d:\login tp final\login.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cFront.h"
+	"Login.h"
+
+1700432488 d:\login tp final\login.h
+
+1700331862 source:d:\login tp final(usb)\cfront.c
+	"cFront.h"
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+	<unistd.h>
+	<stdbool.h>
+
+1700326272 d:\login tp final(usb)\cfront.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+	<unistd.h>
+	<stdbool.h>
+
+1700463839 source:d:\login tp final(usb)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cFront.h"
+	"Login.h"
+
+1700464084 d:\login tp final(usb)\login.h
+
+1700464238 source:d:\login tp final(usb)\login.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cFront.h"
+	"Login.h"
+
